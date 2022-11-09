@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve flaskapp
+After=network.target
+
+[Service]
+User=stjepan
+Group=www-data
+WorkingDirectory=/home/stjepan/www/flaskapp
+Environment="PATH=/home/stjepan/www/flaskapp/flaskenv/bin"
+ExecStart=/home/stjepan/www/flaskapp/flaskenv/bin/gunicorn --workers 3 --bind unix:flaskapp.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target

@@ -13,4 +13,5 @@ def get_integral(lower, upper):
 
     return compute_all(lower, upper)
 
-app.run()
+if __name__=="__main__":
+    app.run(host='0.0.0.0')
