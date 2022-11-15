@@ -26,18 +26,3 @@ def compute_all(lower, upper):
 		results.append(integral)
 
 	return results
-
-if __name__ == '__main__':
-	N = [10, 100, 1000, 10000, 100000, 1000000]
-	lower = 0
-	upper = 3.14159
-
-	results = []
-
-	for n in N:
-
-		integral = compute(lower, upper, n)
-
-		results.append(integral)
-
-	print(results)
