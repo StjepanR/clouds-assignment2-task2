@@ -29,7 +29,8 @@ sudo source flaskenv/bin/activate
 /home/stjepan/www/flaskapp/flaskenv/bin/pip3 install jsonpickle
 
 # service
-sudo systemctl start flaskapp
+sudo systemctl start flaskapp.service
+sudo systemctl restart flaskapp.service
 sudo systemctl enable flaskapp
 
 # nginx
